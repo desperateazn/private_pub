@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.files        = Dir["{app,lib,spec}/**/*", "[A-Z]*", "init.rb"] - ["Gemfile.lock"]
   s.require_path = "lib"
 
-  s.add_dependency 'faye'
-
+  s.add_dependency 'faye', '~> 0.8.8'
+  s.add_dependency 'faye-redis', '~> 0.1.0'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec', '~> 2.8.0'
   s.add_development_dependency 'jasmine', '>= 1.1.1'
