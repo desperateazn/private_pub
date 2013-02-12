@@ -32,7 +32,6 @@ function buildPrivatePub(doc) {
     },
 
     connectToFaye: function() {
-      alert('CONNECTING TO FAYE');
       self.fayeClient = new Faye.Client(self.subscriptions.server);
       self.fayeClient.addExtension(self.fayeExtension);
       for (var i=0; i < self.fayeCallbacks.length; i++) {
@@ -64,7 +63,6 @@ function buildPrivatePub(doc) {
     },
 
     handleResponse: function(message) {
-      alert('HANDLING RESPONSE');
       if (message.eval) {
         eval(message.eval);
       }
@@ -74,7 +72,6 @@ function buildPrivatePub(doc) {
     },
 
     subscribe: function(channel, callback) {
-      alert('SUBSCRIBING');
       self.subscriptionCallbacks[channel] = callback;
     }
   };
